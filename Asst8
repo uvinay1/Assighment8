@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    form {
+      margin: 0 auto;
+      width: 300px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="file"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    select {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 5px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    h1 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sign Up</h1>
+  <form>
+    <label for="fullname">Name:</label><br>
+    <input type="text" id="fullname" name="fullname" required><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" minlength="8" required><br>
+
+    <label for="confirmpassword">Confirm Password:</label><br>
+    <input type="password" id="confirmpassword" name="confirmpassword" minlength="8" required><br>
+
+    <label for="dob">Date Of Birth:</label><br>
+    <input type="date" id="dob" name="dob" required><br>
+
+    <label for="gender">Gender:</label><br>
+    <select id="gender" name="gender" required>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select><br>
+
+    <label for="photo">Insert your photo:</label><br>
+    <input type="file" id="photo" name="photo" accept="image/*"><br>
+
+    <label for="resume">Insert your resume:</label><br>
+    <input type="file" id="resume" name="resume" accept="application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document"><br>
+
+    <label for="securityquestion">Security Question:</label><br>
+    <select id="securityquestion" name="securityquestion">
+      <option value="yourfirstpet">What was the name of your first pet?</option>
+      <option value="favoritefood">What is your favorite food?</option>
+      <option value="hometown">What is your hometown?</option>
+    </select><br>
+
+    <label for="securityanswer">Answer:</label><br>
+    <input type="text" id="securityanswer" name="securityanswer" minlength="3" required><br>
+
+    <input type="checkbox" id="termsandconditions" name="termsandconditions" required><label for="termsandconditions"> I agree terms and conditions</label><br>
+
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>
